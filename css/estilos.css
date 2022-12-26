@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #15163D;
+}
+
+main,
+nav {
+    width: 83.33%;
+    margin: 0 auto;
+}
+
+section {
+    width: 100%;
+}
+
+nav,
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+nav {
+    align-items: center;
+
+}
+
+nav div {
+    width: 10%;
+}
+
+nav div+div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+
+section div {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 50vh;
+
+
+
+}
+
+section div+div {
+    width: 50%;
+}
+
+
+/*
+nav div:nth-child(2) { display:flex; background-color:red;}
+*/
+nav a {
+
+    text-decoration: none;
+    color: #15163D;
+    text-transform: capitalize;
+    font-size: 1rem;
+
+
+
+
+}
+
+
+
+
+h2 {
+    font-size: 3.62em;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1em;
+}
+
+button {
+    background-color: #04146C;
+    color: white;
+}
+
+footer {
+    width: 100%;
+    background-color: #15163D;
+    height: 40vh;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 80%;
+    }
+
+
+}
