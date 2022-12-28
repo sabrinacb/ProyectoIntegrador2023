@@ -3,6 +3,8 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+ 
 }
 
 body {
@@ -63,9 +65,13 @@ section div+div {
 /*
 nav div:nth-child(2) { display:flex; background-color:red;}
 */
+a {   text-decoration: none;}
+
+a:hover { text-decoration: underline;}
+
 nav a {
 
-    text-decoration: none;
+  
     color: #15163D;
     text-transform: capitalize;
     font-size: 1rem;
@@ -89,14 +95,50 @@ p {
 
 button {
     background-color: #04146C;
-    color: white;
+    
+    width: 36.5%;
+    padding: 0.8em;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+ 
 }
+
+ul, button { color: white;}
 
 footer {
     width: 100%;
-    background-color: #15163D;
+    padding-left: 8.33%;
+    padding-top: 2.5em;
+    
+    background-color: #151615;
+    
     height: 40vh;
+    display: flex;
 }
+
+footer a { color: white;}
+
+
+ul {
+width: 16.66%;
+list-style-type: none;
+/*
+list-style-image: url(../imagenes/estrella-nousar.png);
+*/
+font-size: 1em;
+font-weight: 300;
+
+
+}
+
+
+li {
+    
+    margin-bottom: 2em;
+    /*background: url(../imagenes/estrella-nousar.png) no-repeat 0px 2px;
+background-size: 15px; padding-left: 20px;*/}
 
 @media (max-width: 768px) {
 
