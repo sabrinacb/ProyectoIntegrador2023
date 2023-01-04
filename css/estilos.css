@@ -4,7 +4,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
- 
+
+
 }
 
 body {
@@ -15,11 +16,13 @@ body {
 main,
 nav {
     width: 83.33%;
-    margin: 0 auto;
+    margin: 15px auto;
 }
 
+section:first-child { margin-top: 6.25em;}
 section {
     width: 100%;
+    margin-bottom: 6.25em;
 }
 
 nav,
@@ -28,6 +31,9 @@ section {
     justify-content: space-between;
     align-items: flex-start;
 }
+
+
+
 
 nav {
     align-items: center;
@@ -44,34 +50,50 @@ nav div+div {
     width: 30%;
 }
 
+nav div img { width: 50%;}
+
 
 section div {
     width: 40%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
-    min-height: 50vh;
+    min-height: 40vh;
 
 
 
 }
+
+img { width: 100%;}
+
 
 section div+div {
     width: 50%;
 }
 
+main section:first-child div, main section:last-child div + div { justify-content: space-between;}
+main section:nth-child(2) div, main section:last-child(5) div { width: 50%; min-height: auto;  }
+main section:nth-child(n + 2) div h2 { margin-bottom:2.62rem;}
+
+main section:last-child  div h2 { margin-bottom: 0;}
+main section:nth-child(2) div + div, main section:nth-child(5) div + div { width: 40%;}
+
+
 
 /*
 nav div:nth-child(2) { display:flex; background-color:red;}
 */
-a {   text-decoration: none;}
+a {
+    text-decoration: none;
+}
 
-a:hover { text-decoration: underline;}
+a:hover {
+    text-decoration: underline;
+}
 
 nav a {
 
-  
+
     color: #15163D;
     text-transform: capitalize;
     font-size: 1rem;
@@ -84,67 +106,239 @@ nav a {
 
 
 
-h2 {
+h2,
+h5 {
     font-size: 3.62em;
 }
 
-p {
+p,
+h4 {
     font-weight: 300;
-    font-size: 1em;
+    font-size: 1rem;
 }
+
+
 
 button {
     background-color: #04146C;
-    
-    width: 36.5%;
+
+    width: 38.5%;
     padding: 0.8em;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1rem;
     border-radius: 8px;
- 
+
 }
 
-ul, button { color: white;}
+ul,
+button, footer  {
+    color: white;
+}
+
+footer p { width: 100%;}
+
+/*testimonios*/
+main section:nth-child(4) div {
+
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+
+
+
+
+}
+
+main section:nth-child(4) {
+    flex-direction: column;
+    min-height: 60vh;
+    justify-content: space-between;
+}
+
+main section:nth-child(4) img,
+main section:nth-child(4) article {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+main section:nth-child(4) img {
+    border-radius: 100px;
+    width: 33.33%;
+
+
+}
+
+/*articulos de los testimonios*/
+article {
+    text-align: center;
+    padding: 2em;
+    justify-content: space-between;
+    min-height: 40vh;
+    width: 30%;
+    background-color: #EFF2FF;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+
+
+main section:nth-child(4) div {
+    justify-content: space-between;
+    
+}
+
+main section:nth-child(4) div+div {
+    flex-direction: row;
+    min-height: 20vh;
+
+
+}
+
+h3 {
+    text-transform: capitalize;
+    font-weight: 400;
+}
 
 footer {
     width: 100%;
     padding-left: 8.33%;
     padding-top: 2.5em;
-    
-    background-color: #151615;
-    
+    background-color: #15163D;
     height: 40vh;
     display: flex;
+    flex-wrap: wrap;
+  
+    /*permite que el párrafo vaya debajo porque tiene un width de 100% y le estoy diciendo con esto que si no entre no se encolumna*/
 }
 
-footer a { color: white;}
+
+footer p { text-align: center;}
+
+
+
+footer a {
+    color: white;
+}
 
 
 ul {
-width: 16.66%;
-list-style-type: none;
-/*
+    width: 16.66%;
+    list-style-type: none;
+    line-height: 40px;
+    /*
 list-style-image: url(../imagenes/estrella-nousar.png);
 */
-font-size: 1em;
-font-weight: 300;
+    font-size: 1em;
+    font-weight: 300;
 
 
 }
 
 
-li {
-    
-    margin-bottom: 2em;
-    /*background: url(../imagenes/estrella-nousar.png) no-repeat 0px 2px;
-background-size: 15px; padding-left: 20px;*/}
+li:first-child,
+h3 {
+
+    font-size: 1.12em;
+
+
+}
+
+
+li:first-child {
+    font-weight: 700;
+  
+}
+
+
+
+
+
+
+
+
 
 @media (max-width: 768px) {
+
+
+
+    * { text-align: center;}
+   
 
     body {
         font-size: 80%;
     }
 
+
+    nav div img { width: 100%;}
+
+    section div { min-height: auto;}
+    section h2, section p, section:nth-child(4) article,h5  { margin-bottom: 42px;}
+    section,
+    main section:nth-child(4) div+div,
+    footer {
+        flex-direction: column;
+      
+    }
+
+    section, main section:nth-child(4),footer div { width: 83.33%;}
+    footer ul { width: 100%;}
+    footer ul:first-child{ margin-bottom: 66px;}
+    
+  /*chequear que no está centrada la parte de testimonios*/
+
+    section:nth-child(5) { display: none;}
+    section,
+    section div,
+    section div+div,
+    article {
+        width: 100% !important ;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    section:nth-child(2) div + div  {order:-1; }
+
+    article {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        height: auto;
+        width: 100%;
+
+    }
+    
+    footer ul+ul {
+        order: -1;
+    }
+
+
+    nav div+div {
+        display: none;
+    }
+
+
+
+
+}
+
+@media (max-width: 992px) {
+
+    button {
+        width: 50%;
+    }
+
+    article img {
+        width: 50%;
+    }
 
 }
